@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+	<groupId>com.shineyue.platform2.0</groupId>
+	<artifactId>pt-comment-service</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>pt-signPad-service</name>
+	
+	<description>Demo project for Spring Boot</description>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+	<dependencies>
+		<dependency>
+		<!--  pt-common-service 提供了mybatis   json  excel  apache拓展包常用功能,无需在其他service中添加 -->
+			<groupId>com.shineyue.platform2.0</groupId>
+			<artifactId>pt-common-service</artifactId>
+			<version>0.0.2-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.6</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.github.xiaoymin</groupId>
+			<artifactId>knife4j-spring</artifactId>
+			<version>1.9.6</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-websocket</artifactId>
+			<version>2.0.5.RELEASE</version>
+		</dependency>
+	</dependencies>
+
+<distributionManagement>
+		<repository>
+			<id>SMSERelease</id>
+			<name>SMSE</name>
+			<url>http://192.168.5.20/nexus/content/repositories/SMSERelease</url>
+		</repository>
+		<snapshotRepository>
+			<id>SMSESnapshots</id>
+			<name>SMSE</name>
+			<url>http://192.168.5.20/nexus/content/repositories/SMSESnapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+</project>
